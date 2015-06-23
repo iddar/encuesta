@@ -3,6 +3,7 @@ var Task = document.querySelectorAll('.card');
 var Title = document.getElementById('title');
 var Encuesta = document.getElementById('encuesta');
 var Resultados = document.getElementById('resultados');
+var ResultadosContent = document.getElementById('resultados-content');
 var Producto = '';
 
 if (!localStorage['alfajor-excelente']) {
@@ -75,18 +76,21 @@ function votos(event) {
 window.addEventListener("hashchange", history, false);
 
 function history(event) {
-  Board.classList.add('hide');
-  Resultados.classList.remove('hide');
+  if (location.hash != '#home') {
+    Board.classList.add('hide');
+    Resultados.classList.remove('hide');
 
-  var respuestas = Object.keys(localStorage);
-  var txt = '';
-  Resultados.innerHTML = '';
-  for (var key in respuestas) {
-    txt = respuestas[key] + ': ' + localStorage[respuestas[key]];
-    var parrafo = document.createElement("p");
-    var txtElement = document.createTextNode(txt);
-    parrafo.appendChild(txtElement);
-    Resultados.appendChild(parrafo);
+    var respuestas = Object.keys(localStorage);
+    var txt = '';
+    ResultadosContent.innerHTML = '';
+    for (var key in respuestas) {
+      txt = respuestas[key] + ': ' + localStorage[respuestas[key]];
+      var parrafo = document.createElement("p");
+      var txtElement = document.createTextNode(txt);
+      parrafo.appendChild(txtElement);
+      ResultadosContent.appendChild(parrafo);
+    }
+    return;
   }
-
+  reset();
 }
