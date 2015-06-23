@@ -1,0 +1,88 @@
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#board{
+  font-size: 0;
+}
+
+.card{
+  display: inline-block;
+  width: calc(100% / 4);
+  height: 50vh;
+}
+
+.alfajor{
+  background: url('img/alfajor.jpg');
+  background-size: cover;
+}
+
+.biscoti{
+  background: url('img/biscoti.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.brow{
+  background: url('img/brow.jpg');
+  background-size: cover;
+}
+
+.mantequilla{
+  background: url('img/mantequilla.jpg');
+  background-size: cover;
+}
+
+.pastaseca{
+  background: url('img/pastaseca.jpg');
+  background-size: cover;
+}
+
+.paydequeso{
+  background: url('img/paydequeso.jpg');
+  background-size: cover;
+}
+
+.polvorones{
+  background: url('img/polvorones.jpg');
+  background-size: cover;
+}
+
+.logo img{
+  width: 100%;
+}
+
+.hide{
+  display: none;
+}
+
+#encuesta{
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background: #225378;
+}
+
+#title{
+  margin: 2em 0 0 0;
+  display: inline-block;
+  color:#EB7F00;
+  text-transform: uppercase;
+}
+
+.opcion{
+  display: inline-block;
+  border-radius: .5em;
+  padding: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 1em 0;
+  width: 50%;
+  background: #ACF0F2;
+}
+
+#resultados p{
+  margin: .5em 3em;
+}
